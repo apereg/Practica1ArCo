@@ -4,19 +4,13 @@
 #include <persona.h>
 #include <alumno.h>
 
-class profesor : public persona{
-
-public:
-    profesor(string nombre, string dni);
-    profesor(string nombre, string dni, Alumno* alumnos);
-
-    void addAlumno();
-    void getResumen();
-
-private:
-    string nombre;
-    string dni;
-    Alumno* alumnos;
+class Profesor : public Persona{
+    private:
+        Alumno alumnos[5];
+    public:
+        Profesor(string nombrein, string apellidosin, string dniin);
+        void addAlumno(int pos);
+        void getResume();
 };
 
 #endif

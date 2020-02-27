@@ -3,23 +3,21 @@
 
 #include <persona.h>
 
-class alumno : public persona{
-
-public:
-    alumno(string nombre, string dni);
-    alumno(string nombre, string dni, int nota);
-    alumno(string nombre, string dni, int nota1, int nota2);
-    alumno(string nombre, string dni, int nota1, int nota2, int nota3);
-
-    void addNota();
-    void getResumen();
-
-private:
-    string nombre;
-    string dni;
-    int nota1;
-    int nota2;
-    int nota3;
+class Alumno : public Persona{
+    private:
+        int nota1;
+        int nota2;
+        int nota3;
+        int notaMedia;
+    public:
+        Alumno(string nombrein, string apellidosin, string dniin);
+        void setNota1(int nota);
+        void setNota2(int nota);
+        void setNota3(int nota);
+        void getNota1();
+        void getNota2();
+        void getNota3();
+        void getNotaMedia();
 };
 
 #endif
