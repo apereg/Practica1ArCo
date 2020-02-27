@@ -26,17 +26,26 @@ public:
 	Alumno(String nombrein, String dniin):Persona(nombrein, dniin){
 
 	}
-	Alumno(String nombrein, String dniin, int nota1):Persona(nombrein, dniin){
+	Alumno(String nombrein, String dniin, int nota1in):Persona(nombrein, dniin){
 		
 	}
-	Alumno(String nombrein, String dniin, int nota1,int nota2):Persona(nombrein, dniin){
+	Alumno(String nombrein, String dniin, int nota1in,int nota2in):Persona(nombrein, dniin){
 		
 	}
-	Alumno(String nombrein, String dniin, int nota1, int nota2, int nota3):Persona(nombrein, dniin){
+	Alumno(String nombrein, String dniin, int nota1in, int nota2in, int nota3in):Persona(nombrein, dniin){
 		
 	}
 
 	void setNota(int nota){
+
+	}
+};
+
+class Profesor : public Persona{
+private:
+	Alumno[] alumnos;
+public:
+	Profesor(String nombrein, String dniin):Persona(nombrein, dniin){
 
 	}
 };
