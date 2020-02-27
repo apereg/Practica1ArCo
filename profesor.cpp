@@ -1,13 +1,16 @@
 #include "profesor.h"
 #include <iostream>
 
-Profesor::Profesor(string nombrein, string apellidosin, string dniin):Persona(nombrein, apellidosin, dniin){
+Profesor::Profesor(){}
+Profesor::Profesor(string nombrein, string apellidosin, string dniin){
+    this->setNombre(nombrein);
+    this->setApellidos(apellidosin);
+    this->setDni(dniin);
 }
 
+
 void Profesor :: addAlumno(Alumno alumno){
-    cout<<"Se entra al addalumno\n";
     this->alumnos[nAlumnos] = alumno;
-    cout<<"Se anyadio el alumno\n";
     nAlumnos++;
 }
 
@@ -15,12 +18,14 @@ Alumno Profesor :: getAlumno(int pos){
     return this->alumnos[pos];
 }
 
-void Profesor :: getResume(){
-    cout<<"Aqui va el resumen\n";
+void Profesor :: getResumen(){
     int i;
+    cout<<"El teacher es " << this->getNombre() << " " << this->getApellidos() << "\n";
     for (i = 0; i<nAlumnos;i++) {
-     cout<<alumnos[i].getNombre();
+     cout<<alumnos[i].getNombre()<<" "<<alumnos->getApellidos() <<"\n";
     }
+    if(nAlumnos == 0)
+        cout<<"Este men no tiene alumnos\n";
 
 }
 

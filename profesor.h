@@ -6,14 +6,17 @@
 #include <stdlib.h>
 
 class Profesor : public Persona{
-    private:
+    protected:
         int nAlumnos = 0;
-        Alumno *alumnos;
+        int alumnosLength = 50;
+        Alumno alumnos[50];
     public:
+        Profesor();
         Profesor(string nombrein, string apellidosin, string dniin);
         void addAlumno(Alumno alumno);
         Alumno getAlumno(int pos);
-        void getResume();
+        void getResumen();
+        void imprimirMejorAlumno();
 };
 
 #endif

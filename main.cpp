@@ -5,17 +5,12 @@
 using namespace std;
 
 void Calificando(){
-    Profesor *p1 = new Profesor("Adrián", "Pérez García", "000000000G");
-    cout<<"1";
-    Profesor *p2 = new Profesor("Diego", "González López", "00000000A");
-    cout<<"2";
+    Profesor *p1 = new Profesor("Adrian", "Perez Garcia", "000000000G");
+    Profesor *p2 = new Profesor("Diego", "Gonzalez Lopez", "00000000A");
     Alumno *a1 = new Alumno("Pablo", "Bayon Gonzales", "000000000H");
-    cout<<"3";
     p1->addAlumno(*a1);
-    cout<<"4";
-    p1->getResume();
-    cout<<"5";
-    p2->getResume();
+    p1->getResumen();
+    p2->getResumen();
 }
 
 int main(void){
