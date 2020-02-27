@@ -1,10 +1,14 @@
 #include <iostream>
-
+#include <profesor.h>
 #include "string"
 
 using namespace std;
 
-int main(int argc, char *argv[]){
-	
-    return a.exec();
+void Calificando(){
+    Persona *p1 = new Profesor("Adrian", "Perez Garcia", "71479570D");
+    p1->getResume();
+}
+
+int main(void){
+    Calificando();
 }

@@ -7,10 +7,10 @@ using namespace std;
 class Persona{
     public:
         Persona(string nombrein, string apellidosin, string dniin);
-        void getNombre();
-        void getDni();
-        void getApellidos();
-    private:
+        string getNombre();
+        string getDni();
+        string getApellidos();
+    protected:
         string nombre;
         string apellidos;
         string dni;

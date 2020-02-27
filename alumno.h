@@ -14,10 +14,10 @@ class Alumno : public Persona{
         void setNota1(int nota);
         void setNota2(int nota);
         void setNota3(int nota);
-        void getNota1();
-        void getNota2();
-        void getNota3();
-        void getNotaMedia();
+        int getNota1();
+        int getNota2();
+        int getNota3();
+        int getNotaMedia();
 };
 
 #endif

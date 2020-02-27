@@ -9,8 +9,9 @@ class Profesor : public Persona{
         Alumno alumnos[5];
     public:
         Profesor(string nombrein, string apellidosin, string dniin);
-        void addAlumno(int pos);
-        void getResume();
+        void addAlumno(int pos, Alumno alumno);
+        Alumno getAlumno(int pos);
+        string getResume();
 };
 
 #endif
