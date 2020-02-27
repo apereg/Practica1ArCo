@@ -1,9 +1,7 @@
 #include "alumno.h"
 #include <iostream>
 
-Alumno::Alumno(string nombrein, string apellidosin, string dniin):Persona(nombrein, apellidosin, dniin){
-
-}
+Alumno::Alumno(string nombrein, string apellidosin, string dniin):Persona(nombrein, apellidosin, dniin){}
 
 int Alumno :: getNota1(){
     return nota1;

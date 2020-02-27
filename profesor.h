@@ -3,15 +3,17 @@
 
 #include <persona.h>
 #include <alumno.h>
+#include <stdlib.h>
 
 class Profesor : public Persona{
     private:
-        Alumno alumnos[5];
+        int nAlumnos = 0;
+        Alumno *alumnos;
     public:
         Profesor(string nombrein, string apellidosin, string dniin);
-        void addAlumno(int pos, Alumno alumno);
+        void addAlumno(Alumno alumno);
         Alumno getAlumno(int pos);
-        string getResume();
+        void getResume();
 };
 
 #endif
