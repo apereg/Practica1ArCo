@@ -77,9 +77,8 @@ void Alumno :: getNotasInfo(){
 
 void Alumno :: getResumen(){
     cout<<"Alumno "<<this->getNombre()<<" "<<this->getApellidos()<<" ("<<this->getDni()<<")\n";
-    cout<<"\t\tNotas: ";
+    cout<<"\t- ";
     this->getNotasInfo();
-    cout<<"\n";
 }
 
 

@@ -20,15 +20,23 @@ Alumno Profesor :: getAlumno(int pos){
 
 void Profesor :: getResumen(){
     int i;
-    cout<<"Profesor: D." << this->getNombre() << " " << this->getApellidos() << " ("<<this->getDni()<<"):\n";
+    cout<<"Profesor: D." << this->getNombre() << " " << this->getApellidos() << " ("<<this->getDni()<<"):\n\n";
     if(nAlumnos == 0){
-        cout<<"\tEl profesor D."<<this->getNombre()<<" "<<this->getApellidos()<<"no tiene ningun alumno.\n";
+        cout<<"\tEl profesor D."<<this->getNombre()<<" "<<this->getApellidos()<<" no tiene ningun alumno.\n";
         return;
     }
     for (i = 0; i<nAlumnos;i++) {
         cout<<"\t";
-     alumnos[i].getResumen();
+        alumnos[i].getResumen();
+        cout<<"\n";
     }
+    int mejorNota = this->getMejorNotaMedia();
+    if(mejorNota == -1){
+        cout<<"\tNo existe ningun alumno de "<<this->getNombre()<<" con notas por lo que no hay un mejor alumno\n\n";
+    } else{
+        cout<<"\tEl mejor alumno de " << this->getNombre() << " es "<<this->alumnos[mejorNota].getNombre()<<" "<<this->alumnos[mejorNota].getApellidos()<<" con nota "<<this->alumnos[mejorNota].getNotaMedia()<<".\n\n";
+    }
+
 
 }
 
@@ -60,5 +68,18 @@ int Profesor :: containsAlumno(Alumno *alumno){
             return i;
     }
     return -1;
+}
+
+int Profesor :: getMejorNotaMedia(){
+    int pos = -1, actualTop = 1, max = 0;
+    for (int i = 0; i<this->nAlumnos; i++) {
+        if(this->alumnos[i].getNotaMedia() >= max || this->alumnos[i].getNNotas() >= actualTop){
+            actualTop = this->alumnos[i].getNNotas();
+            max = this->alumnos[i].getNotaMedia();
+            pos = i;
+        }
+
+    }
+    return pos;
 }
 

@@ -21,6 +21,7 @@ class Profesor : public Persona{
         void setNota2(Alumno *alumno,float nota1, float nota2);
         void setNota3(Alumno *alumno,float nota1, float nota2, float nota3);
         int containsAlumno(Alumno *alumno);
+        int getMejorNotaMedia();
 };
 
 #endif
