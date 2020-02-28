@@ -20,12 +20,45 @@ Alumno Profesor :: getAlumno(int pos){
 
 void Profesor :: getResumen(){
     int i;
-    cout<<"El teacher es " << this->getNombre() << " " << this->getApellidos() << "\n";
-    for (i = 0; i<nAlumnos;i++) {
-     cout<<alumnos[i].getNombre()<<" "<<alumnos->getApellidos() <<"\n";
+    cout<<"Profesor: D." << this->getNombre() << " " << this->getApellidos() << " ("<<this->getDni()<<"):\n";
+    if(nAlumnos == 0){
+        cout<<"\tEl profesor D."<<this->getNombre()<<" "<<this->getApellidos()<<"no tiene ningun alumno.\n";
+        return;
     }
-    if(nAlumnos == 0)
-        cout<<"Este men no tiene alumnos\n";
+    for (i = 0; i<nAlumnos;i++) {
+        cout<<"\t";
+     alumnos[i].getResumen();
+    }
 
+}
+
+void Profesor :: setNota1(Alumno *alumno, float nota1in){
+    int pos = this->containsAlumno(alumno);
+    if(pos != -1){
+        this->alumnos[pos].setNota1(nota1in);
+    }
+
+}
+
+void Profesor :: setNota2(Alumno *alumno, float nota1in, float nota2in){
+    int pos = this->containsAlumno(alumno);
+    if(pos != -1){
+        this->alumnos[pos].setNota2(nota1in, nota2in);
+    }
+}
+
+void Profesor :: setNota3(Alumno *alumno, float nota1in, float nota2in, float nota3in){
+    int pos = this->containsAlumno(alumno);
+    if(pos != -1){
+        this->alumnos[pos].setNota3(nota1in, nota2in, nota3in);
+    }
+}
+
+int Profesor :: containsAlumno(Alumno *alumno){
+    for(int i = 0; i < this->nAlumnos; i++){
+        if(this->alumnos[i].getDni() == alumno->getDni())
+            return i;
+    }
+    return -1;
 }
 

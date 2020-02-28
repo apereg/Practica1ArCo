@@ -17,6 +17,10 @@ class Profesor : public Persona{
         Alumno getAlumno(int pos);
         void getResumen();
         void imprimirMejorAlumno();
+        void setNota1(Alumno *alumno,float nota1);
+        void setNota2(Alumno *alumno,float nota1, float nota2);
+        void setNota3(Alumno *alumno,float nota1, float nota2, float nota3);
+        int containsAlumno(Alumno *alumno);
 };
 
 #endif
