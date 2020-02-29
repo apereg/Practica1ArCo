@@ -83,3 +83,10 @@ int Profesor :: getMejorNotaMedia(){
     return pos;
 }
 
+int Profesor :: searchAlumno(string dniin){
+    for (int i = 0; i<this->nAlumnos; i++) {
+        if(alumnos[i].getDni() == dniin)
+            return i;
+    }
+    return -1;
+}

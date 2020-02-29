@@ -22,6 +22,7 @@ class Profesor : public Persona{
         void setNota3(Alumno *alumno,float nota1, float nota2, float nota3);
         int containsAlumno(Alumno *alumno);
         int getMejorNotaMedia();
+        int searchAlumno(string dniin);
 };
 
 #endif
