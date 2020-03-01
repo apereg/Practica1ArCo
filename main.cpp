@@ -30,6 +30,7 @@ void Calificando(){
     /* Se califica (desde el profesor) a los alumnos */
     p1->setNota2(a1, 9.1, 5.0);
     p1->setNota3(a2, 3.0, 3.5, 4.5);
+    p2->setNota2(a3, 5.0, 9.9);
 
     /* Se crea un array de profesores y se guardan en el todos los profesores */
     Profesor profesores[3];
@@ -51,13 +52,14 @@ void Calificando(){
         cout<<"Introduce un DNI para comenzar la busqueda: ";
         string dniin;
         cin>>dniin;
-        cout<<dniin<<endl;
-        int aux = -1;
+        cout<<endl;
+
         for (int i = 0; i <numProfesores;i++) {
             if(profesores[i].getDni() == dniin){
                 profesores[i].getResumen();
                 break;
             } else{
+                int aux = -1;
                 aux = profesores[i].searchAlumno(dniin);
                 if(aux != -1){
                     cout<<endl;

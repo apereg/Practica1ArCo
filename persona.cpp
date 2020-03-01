@@ -23,9 +23,11 @@ string Persona::getApellidos(){
 void Persona::setNombre(string nombrein){
     this->nombre = nombrein;
 }
+
 void Persona::setDni(string dniin){
     this->dni = dniin;
 }
+
 void Persona::setApellidos(string apellidosin){
     this->apellidos = apellidosin;
 }
