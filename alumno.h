@@ -20,9 +20,9 @@ class Alumno : public Persona{
         float getNota3();
         int getNNotas();
         float getNotaMedia();
-        void setNota1(float nota1);
-        void setNota2(float nota1, float nota2);
-        void setNota3(float nota1, float nota2, float nota3);
+        void setNota(float nota1);
+        void setNota(float nota1, float nota2);
+        void setNota(float nota1, float nota2, float nota3);
         void getResumen();
 
 };

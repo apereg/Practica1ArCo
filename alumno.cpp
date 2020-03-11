@@ -49,18 +49,18 @@ float Alumno :: calcularMedia(){
     return aux / numNotas;
 }
 
-void Alumno :: setNota1(float nota1in){
+void Alumno :: setNota(float nota1in){
     notas[0] = nota1in;
     numNotas++;
 }
 
-void Alumno :: setNota2(float nota1in, float nota2in){
+void Alumno :: setNota(float nota1in, float nota2in){
     notas[0] = nota1in;
     notas[1] = nota2in;
     numNotas+=2;
 }
 
-void Alumno :: setNota3(float nota1in, float nota2in, float nota3in){
+void Alumno :: setNota(float nota1in, float nota2in, float nota3in){
     notas[0] = nota1in;
     notas[1] = nota2in;
     notas[2] = nota3in;
@@ -77,10 +77,10 @@ void Alumno :: getResumen(){
 
 void Alumno :: getNotasInfo(){
     if(numNotas == 0){
-        cout<<"\t- El alumno no tiene notas registradas.\n";
+        cout<<"El alumno no tiene notas registradas.\n";
     } else{
         for (int i = 0; i<this->numNotas; i++) {
-            cout<<"Nota"<<i+1<<": "<<this->notas[i]<<", ";
+            cout<<"Nota"<<i+1<<": "<<this->notas[i]<<"  ";
         }
         cout<<endl<<"\t- Nota media: "<<this->getNotaMedia()<<".\n";
     }

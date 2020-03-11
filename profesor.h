@@ -18,9 +18,9 @@ class Profesor : public Persona{
         Alumno getAlumno(int pos);
         int getMejorNotaMedia();
         void addAlumno(Alumno alumno);
-        void setNota1(Alumno *alumno,float nota1);
-        void setNota2(Alumno *alumno,float nota1, float nota2);
-        void setNota3(Alumno *alumno,float nota1, float nota2, float nota3);
+        void setNota(Alumno *alumno,float nota1);
+        void setNota(Alumno *alumno,float nota1, float nota2);
+        void setNota(Alumno *alumno,float nota1, float nota2, float nota3);
         int containsAlumno(Alumno *alumno);
         int searchAlumno(string dniin);
         void getResumen();

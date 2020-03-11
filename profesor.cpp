@@ -28,25 +28,25 @@ int Profesor :: getMejorNotaMedia(){
 }
 
 
-void Profesor :: setNota1(Alumno *alumno, float nota1in){
+void Profesor :: setNota(Alumno *alumno, float nota1in){
     int pos = this->containsAlumno(alumno);
     if(pos != -1){
-        this->alumnos[pos].setNota1(nota1in);
+        this->alumnos[pos].setNota(nota1in);
     }
 
 }
 
-void Profesor :: setNota2(Alumno *alumno, float nota1in, float nota2in){
+void Profesor :: setNota(Alumno *alumno, float nota1in, float nota2in){
     int pos = this->containsAlumno(alumno);
     if(pos != -1){
-        this->alumnos[pos].setNota2(nota1in, nota2in);
+        this->alumnos[pos].setNota(nota1in, nota2in);
     }
 }
 
-void Profesor :: setNota3(Alumno *alumno, float nota1in, float nota2in, float nota3in){
+void Profesor :: setNota(Alumno *alumno, float nota1in, float nota2in, float nota3in){
     int pos = this->containsAlumno(alumno);
     if(pos != -1){
-        this->alumnos[pos].setNota3(nota1in, nota2in, nota3in);
+        this->alumnos[pos].setNota(nota1in, nota2in, nota3in);
     }
 }
 
